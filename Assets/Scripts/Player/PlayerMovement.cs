@@ -5,6 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance {  get; private set; }
     [SerializeField] private float speed = 7f, dashSpeed = 7f, dashAmount = 7f, dashDelay = 1f, tempMinimum = 7 * 3 / 7, tempSpeedDrop = 7 * 2 / 7;
     private float x, y;
     [SerializeField] private bool canMove = true,canDash= true;
